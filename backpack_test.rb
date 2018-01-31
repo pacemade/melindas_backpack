@@ -62,7 +62,6 @@ class BackpackTest < MiniTest::Test
 
   ##### TESTS ABOUT PRINTING THE LIST #####
   def test_that_backpack_prints_correctly
-    skip
     backpack = build(:backpack, day_of_week: 'monday', weather: 'sunny')
     expected =
 "Melinda, here's your packing list!
@@ -70,9 +69,8 @@ Day: monday, Weather: sunny
 
 - pants
 - shirt
-- gym shoes
 - packed lunch"
-    assert_equal(expected, backpack.my_func)
+    assert_equal(expected, backpack.print_list)
   end
 
 end
